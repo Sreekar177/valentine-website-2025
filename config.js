@@ -1,70 +1,89 @@
-// Basic Information
-valentineName: "Oye Kannammaa.. ❤️"                   // Your Valentine's name
-pageTitle: "A Special Question Just for You... 💌" // Browser tab title
+// ============================================
+// 💝 CUSTOMIZE YOUR VALENTINE'S WEBSITE HERE 💝
+// ============================================
 
-// Floating Background Elements
-floatingEmojis: {
-    hearts: ['💘', '💖', '💝', '💕', '💞'],   // Heart emojis in background
-    extras: ['🌹', '✨', '💫', '💍']          // Special romantic extras
-}
+const CONFIG = {
+    // Your Valentine's name that will appear in the title
+    // Example: "Jade", "Sarah", "Mike"
+    valentineName: "Oyee Kannammaa...❤️",
 
-// Questions and Buttons
-questions: {
-    first: {
-        text: "Do you have any idea how much I love you? 😘", // First question
-        yesBtn: "Maybe? 🤭",      // Yes button text
-        noBtn: "Tell me! 🤍",     // No button text
-        secretAnswer: "I love you beyond infinity and back! 🚀💖"  // Hidden message
+    // The title that appears in the browser tab
+    // You can use emojis! 💝 💖 💗 💓 💞 💕
+    pageTitle: "A special question just for you? 💝",
+
+    // Floating emojis that appear in the background
+    // Find more emojis at: https://emojipedia.org
+    floatingEmojis: {
+        hearts: ['❤️', '💖', '💝', '💗', '💓'],  // Heart emojis
+        bears: ['🧸', '🐻']                       // Cute bear emojis
     },
-    second: {
-        text: "If love was measured in stars, how many would you give me? 🌟",  
-        startText: "All of them! 🌌",   // Text before percentage
-        nextBtn: "Next 💕"              // Next button text
+
+    // Questions and answers
+    // Customize each question and its possible responses
+    questions: {
+        first: {
+            text: "Do you have any idea how much I love you😘?",                                    // First interaction
+            yesBtn: "Maybe? 🤭",                                             // Text for "Yes" button
+            noBtn: "Tell me! 🤍",                                               // Text for "No" button
+            secretAnswer: "I love you beyond infinity and back! 🚀💖"           // Secret hover message
+        },
+        second: {
+            text: "How much do you love me?",                          // For the love meter
+            startText: "This much!",                                   // Text before the percentage
+            nextBtn: "Next ❤️"                                         // Text for the next button
+        },
+        third: {
+            text: "Now for the most important question… Will you be my Valentine? 😍", // The big question!
+            yesBtn: "Yes!",                                             // Text for "Yes" button
+            noBtn: "No"                                                 // Text for "No" button
+        }
     },
-    third: {
-        text: "Now for the most important question… Will you be my Valentine? 😍", 
-        yesBtn: "YESSS! 💖",       // Yes button text
-        noBtn: "No... just kidding! 😜"  // Playful no button
+
+    // Love meter messages
+    // They show up depending on how far they slide the meter
+    loveMessages: {
+        extreme: "WOOOOW You love me that much?? 🥰🚀💝",  // Shows when they go past 5000%
+        high: "To infinity and beyond! 🚀💝",              // Shows when they go past 1000%
+        normal: "And beyond! 🥰"                           // Shows when they go past 100%
+    },
+
+    // Messages that appear after they say "Yes!"
+    celebration: {
+        title: "Yay! I'm the luckiest person in the world! 🎉💝💖💝💓",
+        message: "Now come get your gift, a big warm hug and a huge kiss!",
+        emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
+    },
+
+    // Color scheme for the website
+    // Use https://colorhunt.co or https://coolors.co to find beautiful color combinations
+    colors: {
+        backgroundStart: "#ffafbd",      // Gradient start (try pastel colors for a soft look)
+        backgroundEnd: "#ffc3a0",        // Gradient end (should complement backgroundStart)
+        buttonBackground: "#ff6b6b",     // Button color (should stand out against the background)
+        buttonHover: "#ff8787",          // Button hover color (slightly lighter than buttonBackground)
+        textColor: "#ff4757"             // Text color (make sure it's readable!)
+    },
+
+    // Animation settings
+    // Adjust these if you want faster/slower animations
+    animations: {
+        floatDuration: "15s",           // How long it takes hearts to float up (10-20s recommended)
+        floatDistance: "50px",          // How far hearts move sideways (30-70px recommended)
+        bounceSpeed: "0.5s",            // Speed of bouncing animations (0.3-0.7s recommended)
+        heartExplosionSize: 1.5         // Size of heart explosion effect (1.2-2.0 recommended)
+    },
+
+    // Background Music (Optional)
+    // Add your own music URL after getting proper licenses
+    music: {
+        enabled: true,                     // Music feature is enabled
+        autoplay: true,                    // Try to autoplay (note: some browsers may block this)
+        musicUrl: "https://res.cloudinary.com/dncywqfpb/video/upload/v1738399057/music_qrhjvy.mp3", // Music streaming URL
+        startText: "🎵 Play Music",        // Button text to start music
+        stopText: "🔇 Stop Music",         // Button text to stop music
+        volume: 0.5                        // Volume level (0.0 to 1.0)
     }
-}
+};
 
-// Love Meter Messages
-loveMessages: {
-    extreme: "WOW! You love me more than the universe itself?! 😍💞",  // Above 5000%
-    high: "Our love is beyond galaxies! 🚀💖",   // Above 1000%
-    normal: "A love as deep as the ocean! 🌊💘"  // Above 100%
-}
-
-// Final Celebration
-celebration: {
-    title: "You just made my heart explode with happiness! 🎉💕",  
-    message: "Now come collect your special surprise… (Hint: it’s full of love!) 💝", 
-    emojis: "💋💖🎁😍💌💞"  
-}
-
-// Website Colors
-colors: {
-    backgroundStart: "#ff758c",      // Background gradient start
-    backgroundEnd: "#ff7eb3",        // Background gradient end
-    buttonBackground: "#ff4f81",     // Button color
-    buttonHover: "#ff6389",          // Button hover color
-    textColor: "#e63946"             // Text color
-}
-
-// Animation Settings
-animations: {
-    floatDuration: "12s",            // Hearts floating speed
-    floatDistance: "60px",           // Sideways movement
-    bounceSpeed: "0.6s",             // Bounce animation speed
-    heartExplosionSize: 1.7          // Final heart explosion size
-}
-
-// Music Settings
-music: {
-    enabled: true, // Keep music feature enabled
-    autoplay: true, // Try to autoplay (some browsers may block this)
-    musicUrl: "YOUR_CLOUDINARY_URL_HERE", // Add your special song
-    startText: "🎶 Play Our Love Song", // Button text to start music
-    stopText: "🔇 Stop Music", // Button text to stop music
-    volume: 0.6 // Adjust volume (0.0 to 1.0)
-}
+// Don't modify anything below this line unless you know what you're doing
+window.VALENTINE_CONFIG = CONFIG; 
